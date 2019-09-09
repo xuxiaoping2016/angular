@@ -1,0 +1,10 @@
+.bordered{
+    border: 1px solid #e3e2e5;
+    border-collapse: collapse;
+}
+.now{
+    color: aqua;
+}
+.special{
+    color: darkred
+}

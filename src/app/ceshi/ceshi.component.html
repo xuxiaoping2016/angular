@@ -1,0 +1,30 @@
+<div>
+  <input [disabled]='isUnchanged'/><br/>
+  <button (click)="toggle()">切换</button>
+  <table class="bordered" border="1">
+    <thead>
+      <tr>
+        <th>姓名</th><th>年纪</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>徐小平</td><td [attr.rowspan]="sp">44</td>
+      </tr>
+      <tr>
+        <td>徐小平</td>
+      </tr>
+      <tr>
+        <td>mei</td><td>3</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="bad curly special"
+     [class]="badCurly">Bad curly</div>
+  <div class="bad curly special"
+     [class.special]="isUnchanged">This one is not so special!</div>
+
+  <div [style.color]="isUnchanged ? 'red' : 'blue'">内联样式</div>
+</div>

@@ -13,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CeshiComponent } from './ceshi/ceshi.component';
+import { AppSizerComponent } from './components/app-sizer/app-sizer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CeshiComponent } from './ceshi/ceshi.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    CeshiComponent
+    CeshiComponent,
+    AppSizerComponent
   ],
   imports: [
     BrowserModule,

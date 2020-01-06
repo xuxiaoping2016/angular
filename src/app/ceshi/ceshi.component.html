@@ -1,6 +1,18 @@
 <div>
   <input [disabled]='isUnchanged'/><br/>
   <button (click)="toggle()">切换</button>
+
+  <div class="bad curly special"
+     [class]="badCurly">Bad curly</div>
+  <div class="bad curly special"
+     [class.special]="isUnchanged">This one is not so special!</div>
+
+  <div [style.color]="isUnchanged ? 'red' : 'blue'">内联样式</div>
+<div>
+  [class] 绑定的是变量，这个变量返回由 css类组成的字符串，这是一个或者全有或者全无的替换型绑定<br/>
+  [class.special]可以绑定到特定的类名。 当模板表达式的求值结果是真值时，Angular 会添加这个类，反之则移除它
+</div>
+
   <table class="bordered" border="1">
     <thead>
       <tr>
@@ -20,11 +32,14 @@
     </tbody>
   </table>
 
+<br/>
+<br/>
+<br/>
+<app-app-sizer [(size)]='size'></app-app-sizer>
+<div>父级显示字体大小：{{size}}</div>
 
-  <div class="bad curly special"
-     [class]="badCurly">Bad curly</div>
-  <div class="bad curly special"
-     [class.special]="isUnchanged">This one is not so special!</div>
-
-  <div [style.color]="isUnchanged ? 'red' : 'blue'">内联样式</div>
+<br/>
+<br/>
+<input #phone placeholder="phone number">  <button (click)="callPhone(phone.value)">Call</button>
+<div>{{phone.value}}</div>
 </div>
